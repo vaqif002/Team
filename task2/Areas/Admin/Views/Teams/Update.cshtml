@@ -1,0 +1,40 @@
+﻿@model UpdateTeamVM
+@{
+    ViewData["Title"] = "Update";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="col-md-6 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <p class="card-description"> </p>
+            <div asp-validation-summary="ModelOnly"></div>
+            <form method="post" enctype="multipart/form-data">
+         
+                <input  type="hidden" asp-for=Id class="form-control">
+
+                <div class="form-group">
+                    <label asp-for="Name">Name</label>
+                    <input asp-for=Name class="form-control">
+                    <span asp-validation-for="Name"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Description">Description</label>
+                    <input asp-for=Description class="form-control">
+                    <span asp-validation-for="Description"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Photo">Photo</label>
+                    <input asp-for=Photo class="form-control">
+                    <span asp-validation-for="Photo"></span>
+                </div>
+
+
+
+                <button type="submit" class="btn btn-primary me-2">Submit</button>
+                <button class="btn btn-light">Cancel</button>
+            </form>
+        </div>
+    </div>
+</div>
+
